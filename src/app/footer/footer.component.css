@@ -1,0 +1,17 @@
+body{
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #A7727D;
+    padding: 1em;
+  }
+
+  .nav-link{
+    color: #EDDBC7;
+    font-size: 1.2em;
+    font-weight: 900;
+    margin-left: 1em;
+  }
+
+  .nav-link:hover{
+    color: #F8EAD8;
+    font-weight: 900;
+  }
