@@ -1,0 +1,24 @@
+body{
+    background-color: #F9F5E7;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container-fluid{
+    background-color: #A7727D;
+    padding: 3em;
+    width: 40%;
+    height: 350px;
+    border-radius: 3em;
+    color: #EDDBC7;
+}
+
+button{
+    background-color: #EDDBC7;
+    color: #A7727D;
+}
+
+button:hover{
+    background-color: #F9F5E7;
+    color: #A7727D;
+}
