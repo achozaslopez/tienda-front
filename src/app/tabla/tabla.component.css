@@ -1,0 +1,38 @@
+body{
+    background-color: #F9F5E7;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#inicio{
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    color: #A7727D;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: #EDDBC7;
+    border: none;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-right: 0.5em;
+}
+
+button:hover{
+    filter:brightness(0.9);
+}
+
+img {
+    width: 2em;
+    text-align: center;
+}
+
+.table{
+    width: 80%;
+}
