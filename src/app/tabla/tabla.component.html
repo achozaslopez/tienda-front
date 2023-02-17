@@ -18,7 +18,6 @@
 
 <body>
     <div class="container-sm p-3" id="inicio">
-        <button class="btn" [routerLink]="['/agregar']" routerLinkActive="router-link-active">Agregar</button>
         <table class="table">
             <thead>
                 <tr>
@@ -29,35 +28,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let categoria of listado">
                     <th scope="row">1</th>
-                    <td class="col-3">Mark</td>
-                    <td class="col-3">Otto</td>
+                    <td class="col-3">{{categoria.cat_nombre}}</td>
+                    <td class="col-3">{{categoria.cat_descripcion}}</td>
                     <td class="col-2">
-                        <button><img src="../../assets/img/edit.svg" alt="editar"></button>
-                        <button><img src="../../assets/img/delete.svg" alt="eliminar"></button>
+                        <button routerLink="/EditarComponent/+{{categoria.id_categoria}}/edit"><img src="../../assets/img/edit.svg" alt="editar"></button>
+                        <button routerLink="/EliminarComponent/+{{categoria.id_categoria}}/delete"><img src="../../assets/img/delete.svg" alt="eliminar"></button>
                     </td>
-
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td class="col-3">Jacob</td>
-                    <td class="col-3">Thornton</td>
-                    <td class="col-2">
-                        <button><img src="../../assets/img/edit.svg" alt="editar"></button>
-                        <button><img src="../../assets/img/delete.svg" alt="eliminar"></button>
-                    </td>
-
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td class="col-3">Larry the Bird</td>
-                    <td class="col-3"></td>
-                    <td class="col-2">
-                        <button><img src="../../assets/img/edit.svg" alt="editar"></button>
-                        <button><img src="../../assets/img/delete.svg" alt="eliminar"></button>
-                    </td>
-
                 </tr>
             </tbody>
         </table>

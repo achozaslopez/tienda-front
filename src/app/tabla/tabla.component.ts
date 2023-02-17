@@ -11,8 +11,8 @@ import { Categoria } from '../interface/categoria';
 export class TablaComponent {
 
   listado: Categoria[] = [];
-  constructor(private conexiom:ConexionService){
-    const dato:Observable<any>= this.conexion.leerApi('categorias');
-  }
+  constructor(private conexion:ConexionService){
+    //const dato:Observable<any>= this.conexion['leerApi']('categorias');
 
+  }
 }
