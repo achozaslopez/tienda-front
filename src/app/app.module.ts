@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AgregarComponent } from './agregar/agregar.component';
 import { EditarComponent } from './editar/editar.component';
 import { ProductosComponent } from './productos/productos.component';
+import { EliminarComponent } from './eliminar/eliminar.component';
 
 
 
@@ -38,6 +39,7 @@ const routes:Routes=[
     AgregarComponent,
     EditarComponent,
     ProductosComponent,
+    EliminarComponent,
 
   ],
   imports: [
