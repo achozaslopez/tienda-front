@@ -7,37 +7,24 @@ import { share } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConexionService {
-  [x: string]: any;
 
-  url ='http://localhost:8080/';
+  constructor(private http: HttpClient) { }
 
-  constructor(private http:HttpClient) { }
+  API_URL:string="http://localhost:8080/";
 
-  leerRegistros():Observable<any>{
-    return this.http.get(this.url);
+  leerApi(url:string): Observable<any>{
+    return this.http.get(this.API_URL+ url).pipe(share());
   }
 
-  leerUno(cat_nombre:string):Observable<any>{
-    return this.http.get(this.url+'/'+cat_nombre);
+  postApi(url:string, dto:any): Observable<any>{
+    return this.http.post(this.API_URL+ url,dto).pipe(share());
   }
 
-  guardar(dato:Dato):Observable<any>{
-    return this.http.post(this.url,dato);
+  putApi(url:string, dto:any): Observable<any>{
+    return this.http.put(this.API_URL+ url,dto).pipe(share());
   }
 
-  editar(cat_nombre:string, dato:Dato):Observable<any>{
-    return this.http.put(this.url+'/'+cat_nombre, dato);
+  deleteApi(url:string): Observable<any>{
+    return this.http.delete(this.API_URL+ url).pipe(share());
   }
-
-  borrar(cat_nombre:string):Observable<any>{
-    return this.http.delete(this.url+'/'+cat_nombre);
-  }
-
-}
-
-export interface Dato{
-  id_categoria:number;
-  cat_nombre:string;
-  cat_descripcion:string;
-
 }
