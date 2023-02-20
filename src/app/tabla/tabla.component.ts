@@ -12,7 +12,7 @@ export class TablaComponent {
 
   listado: Categoria[] = [];
   constructor(private conexion:ConexionService){
-    //const dato:Observable<any>= this.conexion['leerApi']('categorias');
+    const dato:Observable<any>= this.conexion['leerApi']('categorias');
 
   }
 }

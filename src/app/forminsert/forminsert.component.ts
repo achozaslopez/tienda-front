@@ -31,7 +31,7 @@ export class ForminsertComponent {
       dato.subscribe(
         (resp: any) => {
           let stat: number = resp.status;
-          if (stat == 1) {
+          if (stat == 200) {
             this.categoria = resp.data as Categoria;
           }
         })
@@ -64,7 +64,7 @@ export class ForminsertComponent {
         obsa.subscribe(
           (resp: any) => {
             let stat: number = resp.status;
-            if (stat == 1) {
+            if (stat == 200) {
               console.log("ok");
             } else {
               console.log("err");
@@ -76,7 +76,7 @@ export class ForminsertComponent {
         obsb.subscribe(
           (resp: any) => {
             let stat: number = resp.status;
-            if (stat == 1) {
+            if (stat == 200) {
               console.log("ok");
             } else {
               console.log("err");
@@ -88,7 +88,7 @@ export class ForminsertComponent {
         obs.subscribe(
           (resp: any) => {
             let stat: number = resp.status;
-            if (stat == 1) {
+            if (stat == 200) {
               console.log("ok");
             } else {
               console.log("err");
